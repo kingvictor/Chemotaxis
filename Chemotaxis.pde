@@ -6,6 +6,7 @@ void setup()
 }
 void draw()
 {
+for(int x = 0; x<1000; x++)
 background(0.6);
 angus.walk();
 angus.show();
