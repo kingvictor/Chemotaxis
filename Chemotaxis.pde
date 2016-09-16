@@ -1,4 +1,4 @@
-Walker angus = new Walker();
+Walker cow = new Walker();
 
 void setup()
 {
@@ -6,19 +6,20 @@ void setup()
 }
 void draw()
 {
-for(int x = 0; x<1000; x++)
-background(0.6);
-angus.walk();
-angus.show();
-
+  background(0.6);
+  for (int i =0; i< Walker.length; i++){
+cow.walk();
+cow.show();
+  }
 }
 class Walker
 {
   
   int myX, myY;
-  Walker(){
-    myX = (int)(Math.random()*600);
-    myY = (int)(Math.random()*600);
+  Walker()
+  {
+    myX = 400;
+    myY = 400;
   }
 
   void walk()
