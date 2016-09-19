@@ -1,20 +1,25 @@
-Walker cow = new Walker();
-
+Walker [] cow;
 void setup()
 {
   size (2000,2000);
+  cow = new Walker [50];
+  for (int i = 0; i <cow.length; i++)
+  {
+    cow [i] = new Walker();
+}
 }
 void draw()
 {
+{
   background(0.6);
-  for (int i =0; i< Walker.length; i++){
-cow.walk();
-cow.show();
-  }
+   for (int i = 0; i <cow.length; i++)
+   {
+  cow[i].walk();
+  cow[i].show();
+    }
 }
 class Walker
 {
-  
   int myX, myY;
   Walker()
   {
@@ -31,4 +36,4 @@ class Walker
   {
     fill (255);
     ellipse(myX, myY, 20, 20);
-  }}
+  }}}
