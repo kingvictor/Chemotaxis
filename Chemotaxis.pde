@@ -24,7 +24,7 @@ Laggy [] cow ;
    int myX, myY;
    Laggy()
    {
-     myX = (int)(Math.random()*400);
+     myX = (int)(Math.random()*1000);
      myY = (int)(Math.random()*400);
    }
   void lag()
