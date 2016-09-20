@@ -29,8 +29,8 @@ Laggy [] cow ;
    }
   void lag()
   {
-    myX= myX + (int)(Math.random()*40)-20;
-    myY= myY + (int)(Math.random()*40)-20;
+    myX= myX + (int)(Math.random()*30)-10;
+    myY= myY + (int)(Math.random()*30)-10;
   }
    void show()
    {
