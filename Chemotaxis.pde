@@ -3,7 +3,7 @@ Laggy [] cow ;
  {
    frameRate(1000);
    size(1000,400);
-   cow = new Laggy[5000];
+   cow = new Laggy[100000];
    for(int n = 1;n < cow.length; n++)
    {
      cow[n] = new Laggy();
