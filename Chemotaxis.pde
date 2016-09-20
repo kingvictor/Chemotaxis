@@ -1,39 +1,44 @@
-Walker [] cow;
-void setup()
-{
-  size (2000,2000);
-  cow = new Walker [50];
-  for (int i = 0; i <cow.length; i++)
-  {
-    cow [i] = new Walker();
-}
-}
-void draw()
-{
-{
-  background(0.6);
-   for (int i = 0; i <cow.length; i++)
+Laggy [] cow ; 
+ void setup()   
+ {
+   frameRate(900);
+   size(400,400);
+   cow = new Laggy[10000];
+   for(int n = 1;n < cow.length; n++)
    {
-  cow[i].walk();
-  cow[i].show();
-    }
-}
-class Walker
-{
-  int myX, myY;
-  Walker()
-  {
-    myX = 400;
-    myY = 400;
-  }
+     cow[n] = new Laggy();
+   }  
 
-  void walk()
+ }   
+ void draw()   
+ {  
+   background(255);  
+   for(int n = 1; n < cow.length; n++)
+   {
+  cow[n].lag();
+  cow[n].show();
+  } 
+ }  
+ class Laggy    
+ {     
+   int myX, myY;
+   Laggy()
+   {
+     myX = (int)(Math.random()*400);
+     myY = (int)(Math.random()*400);
+   }
+  void lag()
   {
     myX= myX + (int)(Math.random()*40)-20;
     myY= myY + (int)(Math.random()*40)-20;
   }
-  void show()
-  {
-    fill (255);
-    ellipse(myX, myY, 20, 20);
-  }}}
+   void show()
+   {
+     int k;
+     int size;
+     size = (int)(Math.random()*20)+6;
+     k = (int)(Math.random()*100)+5;
+     fill(k,k,k);
+     ellipse(myX, myY, size, size);
+   }   
+ }    
