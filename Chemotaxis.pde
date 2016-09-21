@@ -37,7 +37,7 @@ Laggy [] cow ;
      int k;
      int size;
      size = (int)(Math.random()*15)+7;
-     k = (int)(Math.random()*70%2)+5;
+     k = (int)(Math.random()*70)+5;
      fill(k,k,k);
      ellipse(myX, myY, size, size);
    }   
